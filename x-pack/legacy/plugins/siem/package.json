@@ -7,7 +7,9 @@
   "scripts": {
     "build-graphql-types": "node scripts/generate_types_from_graphql.js",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run --spec ./cypress/integration/**/*.spec.ts --reporter mocha-multi-reporters --reporter-options configFile=./reporter_config.json; mochawesome-merge --reportDir ../../../../target/kibana-siem/cypress/results > ../../../../target/kibana-siem/cypress/results/output.json; marge ../../../../target/kibana-siem/cypress/results/output.json --reportDir ../../../../target/kibana-siem/cypress/results; mkdir -p ../../../../target/junit && cp ../../../../target/kibana-siem/cypress/results/*.xml ../../../../target/junit/"
+    "cypress:run": "cypress run --spec ./cypress/integration/**/*.spec.ts --reporter mocha-multi-reporters --reporter-options configFile=./reporter_config.json; mochawesome-merge --reportDir ../../../../target/kibana-siem/cypress/results > ../../../../target/kibana-siem/cypress/results/output.json; marge ../../../../target/kibana-siem/cypress/results/output.json --reportDir ../../../../target/kibana-siem/cypress/results; mkdir -p ../../../../target/junit && cp ../../../../target/kibana-siem/cypress/results/*.xml ../../../../target/junit/",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "@cypress/webpack-preprocessor": "^4.1.0",
@@ -26,7 +28,8 @@
   "dependencies": {
     "lodash": "^4.17.15",
     "react-beautiful-dnd": "^10.0.1",
-    "react-markdown": "^4.0.6"
+    "react-markdown": "^4.0.6",
+    "snyk": "^1.316.1"
   },
   "workspaces": {
     "packages": [
@@ -38,5 +41,6 @@
       "**/mocha-multi-reporters",
       "**/mocha-multi-reporters/**"
     ]
-  }
+  },
+  "snyk": true
 }
