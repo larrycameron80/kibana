@@ -204,7 +204,7 @@
     "oppsy": "^2.0.0",
     "pegjs": "0.10.0",
     "postcss-loader": "3.0.0",
-    "prop-types": "15.6.0",
+    "prop-types": "15.6.2",
     "proxy-from-env": "1.0.0",
     "pug": "^2.0.3",
     "querystring-browser": "1.0.4",
