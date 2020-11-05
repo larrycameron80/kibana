@@ -26,7 +26,7 @@
   "dependencies": {
     "lodash": "^4.17.15",
     "react-beautiful-dnd": "^10.0.1",
-    "react-markdown": "^4.0.6"
+    "react-markdown": "^5.0.0"
   },
   "workspaces": {
     "packages": [
